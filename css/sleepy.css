@@ -1,0 +1,751 @@
+/*
+
+Sleepy CSS
+by Zach Allen
+
+~ Colors ~
+.info - 00A0B0
+.success - 8EC758
+.warning - FFCC5C
+.danger - CC2A36
+.muted - 918C87
+.latte - FFFCE8
+.not-black - 1F1E1E
+
+1. Grid and Layout
+2. Typography
+3. Buttons
+4. Lists and Tables
+5. Forms
+6. Cards
+7. Utilities
+
+================================================================ */
+/* Grid and Layout */
+/*
+    Learn and use CSS Grid and Flexbox for grids and layouts.    
+*/
+
+.grid {
+    display: grid;
+    grid-gap: 16px;
+}
+
+.container {
+    position: relative;
+    margin: 0 16px;
+}
+
+@media screen and (min-width: 576px) {
+    .container {
+        margin: 0 auto;
+        width: 480px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        margin: 0 auto;
+        width: 640px;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .container {
+        margin: 0 auto;
+        width: 960px;
+    }
+}
+
+/* ================================================================
+    Typography 
+================================================================ */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Roboto Slab', serif;
+}
+
+h1 > small {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #918C87;
+}
+
+hr {
+    margin: 24px auto;
+}
+
+a {
+    text-decoration: none;
+    color: #1EC1D1;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #007581;
+}
+
+.text-muted {
+    color: #918C87;
+}
+
+.text-secondary {
+    color: #615F5E;
+}
+
+.text-info {
+    color: #1EC1D1;
+}
+
+.text-success {
+    color: #8EC758;
+}
+
+.text-warning {
+    color: #FFCC5C;
+}
+
+.text-danger {
+    color: #ED4E5A;
+}
+
+
+/* ================================================================
+    Buttons 
+================================================================ */
+
+button {
+    width: auto;
+    padding: 12px 32px;
+    border-radius: 6px;
+    border: 1px solid #A6A19C;
+    background-color: #fff;
+    color: #1F1E1E;
+}
+
+button:hover {
+    background-color: #F2EDE8;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 1px 2px #1EC1D1;
+    position: relative;
+    z-index: 99;
+}
+
+button:active {
+    background-color: #DBD6D0;
+}
+
+button.sm {
+    padding: 8px 16px;
+    font-size: .8em;
+    border-radius: 4px;
+}
+
+button.lg {
+    padding: 18px 64px;
+    font-size: 1.5em;
+    border-radius: 8px;
+}
+
+button.fluid {
+    width: 100%;
+}
+
+button.secondary {
+    border: none;
+    background-color: #615F5E;
+    color: #FFFCE8;
+}
+
+button.secondary:hover {
+    background-color: #464544;
+}
+
+button.secondary:active {
+    background-color: #1F1E1E;
+}
+
+button:disabled, button.secondary:disabled {
+    background-color: #F2EDE8;
+    color: #A6A19C;
+}
+
+button.info {
+    border: none;
+    background-color: #1EC1D1;
+    color: #FFFCE8;
+}
+
+button.info:hover {
+    background-color: #00A0B0;
+}
+
+button.info:active {
+    background-color: #007581;
+}
+
+button.info:disabled {
+    background-color: #AFEDF3;
+    color: #00A0B0;
+}
+
+button.success {
+    border: none;
+    background-color: #A5DA73;
+    color: #1F1E1E;
+}
+
+button.success:hover {
+    background-color: #8EC758;
+}
+
+button.success:active {
+    background-color: #669836;
+}
+
+button.success:disabled {
+    background-color: #DAF3C3;
+    color: #669836;
+}
+
+button.warning {
+    border: none;
+    background-color: #FFD984;
+    color: #1F1E1E;
+}
+
+button.warning:hover {
+    background-color: #FFCC5C;
+}
+
+button.warning:active {
+    background-color: #DDA731;
+}
+
+button.warning:disabled {
+    background-color: #FFEEC8;
+    color: #DDA731;
+}
+
+button.danger {
+    border: none;
+    background-color: #ED4E5A;
+    color: #FFEEC8;
+}
+
+button.danger:hover {
+    background-color: #CC2A36;
+}
+
+button.danger:active {
+    background-color: #9E151F;
+}
+
+button.danger:disabled {
+    background-color: #FFB7BC;
+    color: #ED4E5A;
+}
+
+.btn-group > button {
+    border-radius: 0;
+    margin: 0;
+}
+
+.btn-group > button.sm:first-of-type {
+    border-radius: 4px 0 0 4px;
+}
+
+.btn-group > button.sm:last-of-type {
+    border-radius: 0 4px 4px 0;
+}
+
+.btn-group > button:first-of-type {
+    border-radius: 6px 0 0 6px;
+}
+
+.btn-group > button:last-of-type {
+    border-radius: 0 6px 6px 0;
+}
+
+.btn-group > button.lg:first-of-type {
+    border-radius: 8px 0 0 8px;
+}
+
+.btn-group > button.lg:last-of-type {
+    border-radius: 0 8px 8px 0;
+}
+
+.btn-group.fluid-2 > button {
+    width: 50%;
+}
+
+.btn-group.fluid-3 > button {
+    width: 33.33%;
+}
+
+.btn-group.fluid-4 > button {
+    width: 25%;
+}
+
+.btn-group.fluid-5 > button {
+    width: 20%;
+}
+
+/* ================================================================
+    Lists and Tables 
+================================================================ */
+
+.list-group {
+    padding: 0;
+    width: 100%;
+}
+
+.list-group > li {
+    margin: 0;
+    padding: 16px;
+    list-style-type: none;
+    border: 1px solid #A6A19C;
+    border-bottom: 0;
+    color: #1F1E1E;
+}
+
+.list-group > li:first-of-type {
+    border-radius: 6px 6px 0 0;
+}
+
+.list-group > li:last-of-type {
+    border-radius: 0 0 6px 6px;
+    border: 1px solid #A6A19C;
+}
+
+.list-group > li > a {
+    color: #1F1E1E;
+}
+
+.list-group > li.disabled {
+    color: #A6A19C;
+}
+
+.list-group > li.info, .list-group.info > li {
+    border: 1px solid #00A0B0;
+    border-bottom: 0;
+    background-color: #AFEDF3;
+    color: #004148;
+}
+
+.list-group > li.info:last-of-type, .list-group.info > li:last-of-type {
+    border: 1px solid #00A0B0;
+}
+
+.list-group > li.info > a, .list-group.info > li > a {
+    color: #004148;
+}
+
+.list-group > li.info.disabled, .list-group.info > li.disabled {
+    color: #00A0B0;
+}
+
+.list-group > li.success, .list-group.success > li {
+    border: 1px solid #669836;
+    border-bottom: 0;
+    background-color: #DAF3C3;
+    color: #26410C;
+}
+
+.list-group > li.success:last-of-type, .list-group.success > li:last-of-type {
+    border: 1px solid #669836;
+}
+
+.list-group > li.success > a, .list-group.success > li > a {
+    color: #26410C;
+}
+
+.list-group > li.success.disabled, .list-group.success > li.disabled {
+    color: #669836;
+}
+
+.list-group > li.warning, .list-group.warning > li {
+    border: 1px solid #DDA731;
+    border-bottom: 0;
+    background-color: #FFEEC8;
+    color: #735410;
+}
+
+.list-group > li.warning:last-of-type, .list-group.warning > li:last-of-type {
+    border: 1px solid #DDA731;
+}
+
+.list-group > li.warning > a, .list-group.warning > li > a {
+    color: #735410;
+}
+
+.list-group > li.warning.disabled, .list-group.warning > li.disabled {
+    color: #DDA731;
+}
+
+.list-group > li.danger, .list-group.danger > li {
+    border: 1px solid #CC2A36;
+    border-bottom: 0;
+    background-color: #FFB7BC;
+    color: #500C11;
+}
+
+.list-group > li.danger:last-of-type, .list-group.danger > li:last-of-type {
+    border: 1px solid #CC2A36;
+}
+
+.list-group > li.danger > a, .list-group.danger > li > a {
+    color: #500C11;
+}
+
+.list-group > li.danger.disabled, .list-group.danger > li.disabled {
+    color: #CC2A36;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #1F1E1E;
+}
+
+.table-responsive {
+    overflow-x: scroll;
+}
+
+/* Tablet Screens */
+@media screen and (min-width: 576px) { 
+    .table-responsive {
+        overflow-x: visible;
+    }
+}
+
+thead > tr > th {
+    margin: 0;
+    background-color: #F2EDE8;
+    border-bottom: 1px solid #DBD6D0;
+    text-align: left;
+}
+
+thead > tr > th:first-of-type {
+    border-top-left-radius: 6px;
+}
+
+thead > tr > th:last-of-type {
+    border-top-right-radius: 6px;
+}
+
+th, td {
+    padding: 16px;
+    border-bottom: 1px solid #DBD6D0;
+}
+
+tr:hover {
+    background-color: #F2EDE8;
+}
+
+table.striped > tbody > tr:nth-child(even) {
+    background-color: #FAFAFA;
+}
+
+table.bordered > tbody > tr > td {
+    border: 1px solid #DBD6D0;
+}
+
+tr:last-of-type > td:first-of-type{
+    border-bottom-left-radius: 6px;
+}
+
+tr:last-of-type > td {
+    border: none;
+}
+
+tr:last-of-type > td:last-of-type{
+    border-bottom-right-radius: 6px;
+}
+
+tr.info > td {
+    border-bottom: 1px solid #00A0B0;
+    background-color: #AFEDF3;
+    color: #004148;
+}
+
+tr.info:hover > td {
+    background-color: #88DBE3;
+}
+
+tr.success > td {
+    border-bottom: 1px solid #669836;
+    background-color: #DAF3C3;
+    color: #26410C;
+}
+
+tr.success:hover > td {
+    background-color: #BBE396;
+}
+
+tr.warning > td {
+    border-bottom: 1px solid #DDA731;
+    background-color: #FFEEC8;
+    color: #735410;
+}
+
+tr.warning:hover > td {
+    background-color: #FFDE94;
+}
+
+tr.danger > td {
+    border-bottom: 1px solid #CC2A36;
+    background-color: #FFB7BC;
+    color: #500C11;
+}
+
+tr.danger:hover > td {
+    background-color: #FF969E;
+}
+
+tr.disabled > td {
+    background-color: #F2EDE8;
+    color: #A6A19C;
+}
+
+
+/* ================================================================
+    Forms 
+================================================================ */
+
+.form-group {
+    margin-bottom: 32px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    padding: 12px 16px;
+    border: 1px solid #A6A19C;
+    border-radius: 6px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 1px 2px #1EC1D1;
+    position: relative;
+    z-index: 99;
+}
+
+input:disabled, textarea:disabled {
+    background-color: #F2EDE8;
+    color: #A6A19C;
+}
+
+::placeholder {
+    color: #A6A19C;
+}
+
+input.success, textarea.success {
+    border: 1px solid #669836;
+    background-color: #DAF3C3;
+    color: #26410C;
+}
+
+.success::placeholder {
+    color: #669836;
+}
+
+input.error, textarea.error {
+    border: 1px solid #CC2A36;
+    background-color: #FFB7BC;
+    color: #500C11;
+}
+
+.error::placeholder {
+    color: #CC2A36;
+}
+
+input.fluid {
+    width: calc(100% - 34px);
+}
+
+textarea {
+    padding: 12px;
+    width: calc(100% - 26px);
+}
+
+select {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px !important;
+}
+
+input[type=color] {
+    min-width: 96px;
+    height: 36px;
+    padding: 2px 4px;
+}
+
+.checkbox-group > input, .radio-group > input {
+    float: left;
+    margin-right: 12px;
+}
+
+.checkbox-group > input:focus, .radio-group > input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: calc(100% - 34px);
+    margin: 4px 0;
+    border: none;
+  }
+  input[type=range]:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 16px;
+    cursor: pointer;
+    background: #f2ede8;
+    border-radius: 8px;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    height: 24px;
+    width: 24px;
+    border-radius: 50px;
+    background: #00a0b0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -5px;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 16px;
+    cursor: pointer;
+    background: #f2ede8;
+    border-radius: 8px;
+  }
+  input[type=range]::-moz-range-thumb {
+    height: 24px;
+    width: 24px;
+    border-radius: 50px;
+    background: #00a0b0;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 16px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #ebe3db;
+    border-radius: 8px;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #f2ede8;
+    border-radius: 8px;
+  }
+  input[type=range]::-ms-thumb {
+    height: 24px;
+    width: 24px;
+    border-radius: 50px;
+    background: #00a0b0;
+    cursor: pointer;
+    height: 16px;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #f2ede8;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #f9f7f5;
+  }
+  
+
+
+/* ================================================================
+    Cards 
+================================================================ */
+
+
+
+
+/* ================================================================
+    Utilities 
+================================================================ */
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+[disabled]:hover {
+    cursor: not-allowed;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.img-link {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #1F1E1E;
+}
+
+.img-link:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* Tablet Screens */
+@media screen and (min-width: 576px) {  }
+
+/* Laptop Screens */
+@media screen and (min-width: 768px) {  }
+
+/* Desktop Screens */
+@media screen and (min-width: 992px) {  }

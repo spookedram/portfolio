@@ -1,0 +1,162 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 32px;
+    line-height: 1.6em;
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        margin: 0 auto;
+        width: 640px;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+@keyframes rainbow {
+    0%   {color: #1EC1D1;}
+    25%  {color: #8EC758;}
+    50%  {color: #FFCC5C;}
+    75%  {color: #ED4E5A;}
+    100% {color: #1EC1D1;}
+}
+
+header > h2 {
+    animation-name: rainbow;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+nav {
+    padding: 24px 0 16px;
+    background-color: #fff;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Laptop Screens */
+@media screen and (min-width: 576px) { 
+    nav {
+        display: none;
+    }
+ }
+
+
+/* Page content */
+article {
+    padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0; right: 50%; left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + article {
+    padding-top: 84px;
+}
+
+nav > a {
+    margin: 0 16px;
+    font-size: 1.2em;
+    color: black;
+}
+
+@keyframes grow {
+    from {font-size: 1.2em; color: black;}
+    to {font-size: 1.3em; color: #ED4E5A;}
+}
+
+nav > a:hover {
+    color: black;
+    text-decoration: none;
+    animation-name: grow;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sway {
+    from {transform: rotate(-5deg);}
+    to {transform: rotate(5deg);}
+}
+
+#logo {
+    height: 256px;
+    animation-name: sway;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#logoBG {
+    position: absolute;
+    top: 32px; right: 50%; left: 50%;
+    transform: translateX(-128px);
+    z-index: -99;
+    height: 256px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+#stats, #workThumbs {
+    grid-template-columns: 1fr;
+}
+
+.thumb {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+}
+
+.thumb, .overlay {
+    height: 256px;
+    width: 256px;
+}
+
+/* Tablet Screens */
+@media screen and (min-width: 576px) { 
+    #stats, #workThumbs {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .thumb, .overlay {
+        width: 232px;
+        height: 232px;
+    }
+}
+
+/* Laptop Screens */
+@media screen and (min-width: 768px) { 
+    .thumb, .overlay {
+        width: 100%;
+        height: 312px;
+    }
+ }
+
+
+
+
+
+/* Tablet Screens */
+@media screen and (min-width: 576px) {  }
+
+/* Laptop Screens */
+@media screen and (min-width: 768px) {  }
+
+/* Desktop Screens */
+@media screen and (min-width: 992px) {  }

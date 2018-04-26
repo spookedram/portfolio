@@ -1,0 +1,150 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zach Allen - Portfolio</title>
+    <meta name="description" content="Zach Allen Portfolio">
+    <meta name="author" content="Zach Allen">
+
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Poppins:400,400i,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/sleepy.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header class="text-center" style="margin-top: 32px;">
+        <img id="logo" src="assets/img/logo.png" alt="Zach Allen Web Logo">
+        <img id="logoBG" src="assets/img/face.png" alt="Colorful shapes">
+        <h1 style="margin: 16px 0; font-size: 3em;">Zach Allen</h1>
+        <h2 class="text-muted" style="margin-bottom:0;">Web Designer</h2>
+    </header>
+
+    <nav id="navigation">
+        <a onclick="window.scrollTo({ behavior: 'smooth', 'top': document.querySelector('#about').offsetTop - 84 });">About</a>
+        <a onclick="window.scrollTo({ behavior: 'smooth', 'top': document.querySelector('#projects').offsetTop - 84 });">Projects</a>
+        <a onclick="window.scrollTo({ behavior: 'smooth', 'top': document.querySelector('#contact').offsetTop - 84 });">Contact</a>
+    </nav>
+
+    <article>
+        <section id="about" class="container text-center">
+            <h2>About</h2>
+            <p>I am a web artist making the internet a more beautiful, enjoyable place to be.</p>
+
+            <div id="stats" class="grid">
+                <div>
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>Research</li>
+                        <li>Wireframing</li>
+                        <li>Graphic Design</li>
+                        <li>UX/UI Design</li>
+                        <li>Web Design</li>
+                        <li>HTML, CSS, and Javascript</li>
+                        <li>Twitter Bootstrap</li>
+                        <li>Wordpress</li>
+                        <li>Squiz Matrix CMS</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Pen and Paper</li>
+                        <li>Adobe Photoshop CC</li>
+                        <li>Adobe Illustrator CC</li>
+                        <li>Sketch and Figma</li>
+                        <li>VS Code</li>
+                        <li>Git (Version control)</li>
+                        <li>Node and NPM</li>
+                        <li>Pug (formerly known as Jade)</li>
+                        <li>SASS (CSS preprocessor)</li>
+                    </ul>
+                </div>
+                
+                <form id="resume" action="https://docs.google.com/document/d/1koRpSOBlGlMCeLFu0nPqo8aNDxdIm24ENfKlPyKMjuQ/edit?usp=sharing" target="_blank">
+                    <button class="danger">View Resume</button>
+                </form>
+                
+                <form id="linkedin" action="http://www.linkedin.com/in/zach-allen-35ab6b57" target="_blank">
+                    <button class="info">View LinkedIn</button>
+                </form>
+            </div>
+        </section>
+
+        <div class="container">
+            <hr>
+        </div>
+
+        <section id="projects">
+            <div class="container">
+                <div class="text-center" style="margin-bottom:16px;">
+                    <h2 style="margin:36px 0 8px;">Projects</h2>
+                    <small class="text-muted">Click image to view project</small>
+                </div>
+
+                <div id="workThumbs" class="grid text-center">
+
+                    <a class="img-link" href="http://ideas.aetn.org" target="_blank">
+                        <img class="circle thumb" src="assets/img/ideas.png" alt="">
+                        <div class="overlay circle" style="background-color:#8EC758;">
+                            <div class="text" style="color:#1f1e1e;">ArkansasIDEAS Site Redesign</div>
+                        </div>
+                    </a>
+
+                    <div>
+                        <h3 class="text-success">IDEAS Site Redesign</h3>
+                        <p>My first year working for AETN, I redesigned the ArkansasIDEAS website. <a href="https://drive.google.com/open?id=1ZmEomrZHy54HE-BBdHzjMk__nz7maNPl" target="_blank">It was outdated, complicated, and in need of renovation.</a> Now it's easy to navigate and aesthetically pleasing, thanks to hard work, modern web design trends, and some useful frameworks and libraries.</p>
+                    </div>
+                    
+                    <a class="img-link" href="http://lit-beyond-29392.herokuapp.com" target="_blank">
+                        <img class="circle thumb" src="assets/img/hrrpg.png" alt="">
+                        <div class="overlay circle" style="background-color:#1EC1D1;">
+                            <div class="text" style="color:#FFFCE8;">House Rules RPG</div>
+                        </div>
+                    </a>
+
+                    <div>
+                        <h3 class="text-info">House Rules RPG</h3>
+                        <p>After writing the rules for a custom tabletop role-playing game system, I created a <a href="http://lit-beyond-29392.herokuapp.com" target="_blank">web app</a> with tools for creating and tracking characters and quests. <i>House Rules</i> is built on Node, Express, MongoDB, and Pug.</p>
+                        <p>You can access the beta using the ID "tester" and the password "letmetest".</p>
+                    </div>
+
+                    <a class="img-link" href="https://www.figma.com/file/QrVSadizjZNLkcV085VwLgub/ColorPalette" target="_blank">
+                        <img class="circle thumb" src="assets/img/sleepy.png" alt="">
+                        <div class="overlay circle" style="background-color:#ED4E5A;">
+                            <div class="text" style="color:#FFFCE8;">Sleepy CSS UI&nbsp;Elements</div>
+                        </div>
+                    </a>
+
+                    <div>
+                        <h3 class="text-danger">Sleepy CSS</h3>
+                        <p>After using Bootstrap on a couple of projects I started to prototype some UI elements for a potential custom CSS framework, the first draft is actually being used on this site! <a href="https://www.figma.com/file/QrVSadizjZNLkcV085VwLgub/ColorPalette" target="_blank">Click here</a> to view the Figma file of the UI elements I created for the framework.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <hr>
+        </div>
+
+        <section id="contact" class="container" style="margin-top: 40px;">
+            <form action="mailto:zallen.work@gmail.com" class="text-center">
+                <button id="contactButton" type="button" class="warning lg">Send me an email!</button>
+            </form>
+        </section>
+    </article>
+        
+    <!-- Body Scripts -->
+    <script src="js/stickyNav.js"></script>
+</body>
+</html>
